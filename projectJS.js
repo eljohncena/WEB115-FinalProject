@@ -1,23 +1,28 @@
-
 document.getElementById('createResume').addEventListener('click', myFunction);
+document.getElementById('clear').addEventListener('click', clearPage);
 
-function myFunction(){
-  resume = myVariables();
-  if (resume.email == "" OR resume.city == "" OR resume.state == "") {
-    window.alert("Enter valid information!!!");
-    location.reload();
+function clearPage() {
+  varClear = document.getElementsByClassName('clear');
+  clearLength = varClear.length;
+  for (i = 0; i < clearLength; i++) {
+    varClear[i].value = '';
   }
-  else{
+}
+
+function myFunction() {
+  resume = myVariables();
+  if (resume.email == "") {
+    window.alert("Enter valid email!!!");
+    location.reload();
+  } else {
     writeDocument();
   }
 }
 
-function myVariables(){
+function myVariables() {
   varName = document.getElementById('name').value;
   varCity = document.getElementById('city').value;
-  varCity = varCity[0].toUpperCase() + varCity.slice(1);
   varState = document.getElementById('state').value;
-  varState = varState[0].toUpperCase() + varState.slice(1);
   varZip = document.getElementById('zip').value;
   varEmail = document.getElementById('email').value;
   varPhone = document.getElementById('phone').value;
@@ -28,6 +33,7 @@ function myVariables(){
   varProgrammingLanguages = document.getElementById('programmingLanguages').value;
   varSpokenLanguages = document.getElementById('spokenLanguages').value;
   varEducation = document.getElementById('education').value;
+  varUniversity = document.getElementById('university').value;
   varCompany = document.getElementById('company').value;
   varPosition = document.getElementById('position').value;
   varBeginning = document.getElementById('beginning').value;
@@ -58,6 +64,7 @@ function myVariables(){
     writing: varWriting,
     programmingLanguages: varProgrammingLanguages,
     spokenLanguages: varSpokenLanguages,
+    university: varUniversity,
     education: varEducation,
     company: varCompany,
     position: varPosition,
@@ -67,7 +74,7 @@ function myVariables(){
     companyTwo: varCompanyTwo,
     positionTwo: varPositionTwo,
     beginningTwo: varBeginningTwo,
-    endTwo: varEnd,
+    endTwo: varEndTwo,
     employmentInfoTwo: varEmploymentInfoTwo,
     companyThree: varCompanyThree,
     positionThree: varPositionThree,
@@ -81,7 +88,7 @@ function myVariables(){
 
 }
 
-function writeDocument(){
+function writeDocument() {
   document.write("<h1>" + resume.name + "</h1>");
   document.write("<p>" + resume.city + ", " + resume.state + " " + resume.zip + " \u25C6 " + resume.phone + " \u25C6 " + resume.email + "</p>");
   document.write("<p> Portfolio: </p>" + "<a href=\"url\" target=\"_blank\">" + resume.portfolio + "</a>");
@@ -95,6 +102,7 @@ function writeDocument(){
   document.write("<p>Spoken Languages: " + resume.spokenLanguages + "</p>");
 
   document.write("<h2 style=\"text-decoration: underline blue;\">Education</h2>");
+  document.write("<p>" + resume.university + "</p>");
   document.write("<p>" + resume.education + "</p>");
 
   document.write("<h2 style=\"text-decoration: underline blue;\">Recent Employment</h2>");
@@ -104,8 +112,10 @@ function writeDocument(){
   document.write("<p style=\"font-weight: bold;\">" + resume.companyTwo + ", " + resume.positionTwo + ", " + resume.beginningTwo + " - " + resume.endTwo + "</p>");
   document.write("<p>Employment Information: " + resume.employmentInfoTwo + "</p>");
 
-  ocument.write("<p style=\"font-weight: bold;\">" + resume.companyThree + ", " + resume.positionThree + ", " + resume.beginningThree + " - " + resume.endThree + "</p>");
-  document.write("<p>Employment Information: " + resume.employmentThree + "</p>");
+  document.write("<p style=\"font-weight: bold;\">" + resume.companyThree + ", " + resume.positionThree + ", " + resume.beginningThree + " - " + resume.endThree + "</p>");
+  document.write("<p>Employment Information: " + resume.employmentInfoThree + "</p>");
 
   document.write("<p>References: " + resume.reference + "</p>");
+
+  document.write("<button type=\"button\" name=\"button\" onclick=\"location.reload();\" >Go back</button>")
 }

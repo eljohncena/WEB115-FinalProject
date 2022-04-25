@@ -1,145 +1,187 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>WEB 115 Final Projecta</title>
-    <style media="screen">
-      
-    </style>
-  </head>
-  <body>
-    <div class="banner">
-      <h1>John Chavez</h1>
-      <h2>WEB 115 Section 0001</h2>
-      <h2>Build Your Resume</h2>
-    </div>
-    <form class="" action="index.html" method="post">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" value="">
-      <br>
-      <br>
-      <label for="city">City</label>
-      <input type="text" id ="city" name="city" value="">
-      <br>
-      <br>
-      <label for="state">State</label>
-      <input type="text" id="state" name="state" value="">
-      <br>
-      <br>
-      <label for="zip">Zip Code</label>
-      <input type="text" id = "zip" name="zip" value="">
-      <br>
-      <br>
-      <label for="email">Email</label>
-      <input type="email" id = "email" name="email" value="" required>
-      <br>
-      <br>
-      <label for="phone">Phone</label>
-      <input type="text" id = "phone" name="phone" value="">
-      <br>
-      <br>
-      <label for="portfolio">Portfolio Link</label>
-      <input type="text" id = "portfolio" name="portfolio" value="">
-      <br>
-      <br>
-      <p>Skills</p>
-      <label for="coding">Coding</label>
-      <input type="text" id = "coding" name="coding" size = "50" value="">
-      <br>
-      <br>
-      <label for="work">Work Ethic</label>
-      <input type="text" id = "work" name="work" size = "50"value="">
-      <br>
-      <br>
-      <label for="writing">Writing Skills</label>
-      <input type="text" id = "writing" size = "50" name="writing" value="">
-      <br>
-      <br>
-      <p>Technical Skills</p>
-      <label for="programmingLanguages">Progamming Languages</label>
-      <input type="text" name="programmingLanguages" id = "programmingLanguages" value="">
-      <br>
-      <br>
-      <label for="spokenLanguages">Spoken Languages</label>
-      <input type="text" name="spokenLanguages" id = "spokenLanguages" value="">
-      <br>
-      <br>
-      <label for="education">Education</label>
-      <br>
-      <textarea name="name" rows="8" id="education" cols="40"></textarea>
-      <br>
-      <br>
-      <p>Recent Employment</p>
-      <label for="company">Company Name</label>
-      <input type="text" name="company" id="company" value="">
-      <br>
-      <br>
-      <label for="position">Position</label>
-      <input type="text" name="position" id="position" value="">
-      <br>
-      <br>
-      <label for="begginning">Start Date</label>
-      <input type="date" id="beginning" name="beginning" value="">
-      <br>
-      <br>
-      <label for="end">End Date</label>
-      <input type="date" id="end" name="end" value="">
-      <br>
-      <br>
-      <label for="employmentInfo">Employment Information</label>
-      <br>
-      <textarea name="name" rows="8" id="employmentInfo" cols="40"></textarea>
-      <br>
-      <br>
-      <label for="companyTwo">Company Name</label>
-      <input type="text" name="companyTwo" id="companyTwo" value="">
-      <br>
-      <br>
-      <label for="positionTwo">Position</label>
-      <input type="text" name="positionTwo" id="positionTwo" value="">
-      <br>
-      <br>
-      <label for="beginningTwo">Start Date</label>
-      <input type="date" id="beginningTwo" name="beginningTwo" value="">
-      <br>
-      <br>
-      <label for="endTwo">End Date</label>
-      <input type="date" id="endTwo" name="endTwo" value="">
-      <br>
-      <br>
-      <label for="employmentInfoTwo">Employment Information</label>
-      <br>
-      <textarea name="name" rows="8" id="employmentInfoTwo" cols="40"></textarea>
-      <br>
-      <br>
-      <label for="companyThree">Company Name</label>
-      <input type="text" name="companyThree" id="companyThree" value="">
-      <br>
-      <br>
-      <label for="positionThree">Position</label>
-      <input type="text" name="positionThree" id="positionThree" value="">
-      <br>
-      <br>
-      <label for="begginningThree">Start Date</label>
-      <input type="date" id="beginningThree" name="beginningThree" value="">
-      <br>
-      <br>
-      <label for="endThree">End Date</label>
-      <input type="date" id="endThree" name="endThree" value="">
-      <br>
-      <br>
-      <label for="employmentInfoThree">Employment Information</label>
-      <br>
-      <textarea name="name" rows="8" id="employmentInfoThree" cols="40"></textarea>
-      <br>
-      <br>
-      <label for="reference">Business Reference</label>
-      <br>
-      <textarea name="name" rows="8" cols="40" id="reference"></textarea>
-      <br>
-      <br>
-      <input type="button" id="createResume" name="createResume" value="Create Resume">
-    </form>
-    <script src="projectJS.js" charset="utf-8"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>WEB 115 Final Projecta</title>
+  <style media="screen">
+
+  </style>
+</head>
+
+<body style='text-align:center;'>
+  <div class="banner">
+    <h1>John Chavez</h1>
+    <h2>WEB 115 Section 0001</h2>
+    <h2>Build Your Resume</h2>
+  </div>
+  <button type="button" name="button" id='clear'>Press to clear content</button>
+  <br>
+  <br>
+  <form class="" action="index.html" method="post">
+    <label for="name">Name</label>
+    <input type="text" class='clear' id="name" name="name" value="John Smith">
+    <br>
+    <br>
+    <label for="city">City</label>
+    <input type="text" class='clear' id="city" name="city" value="Raleigh">
+    <br>
+    <br>
+    <label for="state">State</label>
+    <input type="text" class='clear' id="state" name="state" value="NC">
+    <br>
+    <br>
+    <label for="zip">Zip Code</label>
+    <input type="text" class='clear' id="zip" name="zip" value="27612">
+    <br>
+    <br>
+    <label for="email">Email</label>
+    <input type="email" class='clear' id="email" name="email" value="fake_email@email.com" required>
+    <br>
+    <br>
+    <label for="phone">Phone</label>
+    <input type="text" class='clear' id="phone" name="phone" value="9999999999">
+    <br>
+    <br>
+    <label for="portfolio">Portfolio Link</label>
+    <input type="text" class='clear' id="portfolio" name="portfolio" value="www.github.com">
+    <br>
+    <br>
+    <h3>Skills</h3>
+    <label for="coding">Tech</label>
+    <input type="text" class='clear' id="coding" name="coding" size="50" value="">
+    <br>
+    <br>
+    <label for="work">Work Ethic</label>
+    <input type="text" class='clear' id="work" name="work" size="50" value="">
+    <br>
+    <br>
+    <label for="writing">Writing Skills</label>
+    <input type="text" class='clear' id="writing" size="50" name="writing" value="">
+    <br>
+    <br>
+    <h3>Technical Skills</h3>
+    <label for="programmingLanguages">Progamming Languages</label>
+    <input type="text" name="programmingLanguages" class='clear' id="programmingLanguages" value="HTML, CSS, Javscript, Python">
+    <br>
+    <br>
+    <label for="spokenLanguages">Spoken Languages</label>
+    <input type="text" name="spokenLanguages" class='clear' id="spokenLanguages" value="English, Spanish">
+    <br>
+    <br>
+    <h3>Education</h3>
+    <label for="university">University</label>
+    <input type="text" name="university" id='university' value="Wake Tech">
+    <br>
+    <br>
+    <label for="education">Program Info</label>
+    <br>
+    <textarea name="name" rows="4" class='clear' id="education" cols="40">Associates Computer Programming & Development</textarea>
+    <br>
+    <br>
+    <h3>Recent Employment</h3>
+    <label for="company">Company Name</label>
+    <input type="text" name="company" class='clear' id="company" value="Apple">
+    <br>
+    <br>
+    <label for="position">Position</label>
+    <input type="text" name="position" class='clear' id="position" value="Web Developer">
+    <br>
+    <br>
+    <label for="begginning">Start Date</label>
+    <input type="date" class='clear' id="beginning" name="beginning" value="2017-09-07">
+    <br>
+    <br>
+    <label for="end">End Date</label>
+    <input type="date" class='clear' id="end" name="end" value="">
+    <br>
+    <br>
+    <label for="employmentInfo">Employment Information</label>
+    <br>
+    <textarea name="name" rows="8" class='clear' id="employmentInfo" cols="40">Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id est lorem. Quisque
+        scelerisque, quam non rutrum elementum, urna massa luctus risus, at dignissim
+        lorem nibh non neque. Nulla hendrerit varius tortor quis suscipit. Duis ullamcorper
+        lacus vel fringilla feugiat. Etiam semper at purus eu aliquet. Vestibulum congue
+        faucibus est non dignissim. Suspendisse eu turpis quis mi malesuada egestas quis
+        id magna. In diam enim, porta non feugiat non, consequat nec lectus. Proin l
+        acinia leo nibh, quis dignissim ligula ullamcorper non. Sed semper a leo eu i
+        nterdum. Nulla ipsum ante, pulvinar eget augue eget, congue aliquet elit.
+        Vivamus euismod rhoncus erat nec finibus. Vestibulum consequat nunc non blandit imperdiet.
+        Maecenas euismod venenatis arcu, quis auctor elit rutrum eget.</textarea>
+    <br>
+    <br>
+    <label for="companyTwo">Company Name</label>
+    <input type="text" name="companyTwo" class='clear' id="companyTwo" value="Google">
+    <br>
+    <br>
+    <label for="positionTwo">Position</label>
+    <input type="text" name="positionTwo" class='clear' id="positionTwo" value="Web Developer">
+    <br>
+    <br>
+    <label for="beginningTwo">Start Date</label>
+    <input type="date" id="beginningTwo" class='clear' name="beginningTwo" value="2015-01-05">
+    <br>
+    <br>
+    <label for="endTwo">End Date</label>
+    <input type="date" id="endTwo" class='clear' name="endTwo" value="2017-09-01">
+    <br>
+    <br>
+    <label for="employmentInfoTwo">Employment Information</label>
+    <br>
+    <textarea name="name" rows="8" class='clear' id="employmentInfoTwo" cols="40">Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id est lorem. Quisque
+        scelerisque, quam non rutrum elementum, urna massa luctus risus, at dignissim
+        lorem nibh non neque. Nulla hendrerit varius tortor quis suscipit. Duis ullamcorper
+        lacus vel fringilla feugiat. Etiam semper at purus eu aliquet. Vestibulum congue
+        faucibus est non dignissim. Suspendisse eu turpis quis mi malesuada egestas quis
+        id magna. In diam enim, porta non feugiat non, consequat nec lectus. Proin l
+        acinia leo nibh, quis dignissim ligula ullamcorper non. Sed semper a leo eu i
+        nterdum. Nulla ipsum ante, pulvinar eget augue eget, congue aliquet elit.
+        Vivamus euismod rhoncus erat nec finibus. Vestibulum consequat nunc non blandit imperdiet.
+        Maecenas euismod venenatis arcu, quis auctor elit rutrum eget.</textarea>
+    <br>
+    <br>
+    <label for="companyThree">Company Name</label>
+    <input type="text" name="companyThree" class='clear' id="companyThree" value="Tesla">
+    <br>
+    <br>
+    <label for="positionThree">Position</label>
+    <input type="text" name="positionThree" class='clear' id="positionThree" value="Web Developer">
+    <br>
+    <br>
+    <label for="begginningThree">Start Date</label>
+    <input type="date" id="beginningThree" class='clear' name="beginningThree" value="2013-12-01">
+    <br>
+    <br>
+    <label for="endThree">End Date</label>
+    <input type="date" id="endThree" class='clear' name="endThree" value="2014-12-01">
+    <br>
+    <br>
+    <label for="employmentInfoThree">Employment Information</label>
+    <br>
+    <textarea name="name" rows="8" class='clear' id="employmentInfoThree" cols="40">Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id est lorem. Quisque
+        scelerisque, quam non rutrum elementum, urna massa luctus risus, at dignissim
+        lorem nibh non neque. Nulla hendrerit varius tortor quis suscipit. Duis ullamcorper
+        lacus vel fringilla feugiat. Etiam semper at purus eu aliquet. Vestibulum congue
+        faucibus est non dignissim. Suspendisse eu turpis quis mi malesuada egestas quis
+        id magna. In diam enim, porta non feugiat non, consequat nec lectus. Proin l
+        acinia leo nibh, quis dignissim ligula ullamcorper non. Sed semper a leo eu i
+        nterdum. Nulla ipsum ante, pulvinar eget augue eget, congue aliquet elit.
+        Vivamus euismod rhoncus erat nec finibus. Vestibulum consequat nunc non blandit imperdiet.
+        Maecenas euismod venenatis arcu, quis auctor elit rutrum eget.</textarea>
+    <br>
+    <br>
+    <label for="reference">Business Reference</label>
+    <br>
+    <textarea name="name" rows="4" class='clear' cols="40" id="reference">John Doe 123-456-7890
+      John Doe 123-456-7890</textarea>
+    <br>
+    <br>
+    <input type="button" id="createResume" name="createResume" value="Create Resume">
+  </form>
+  <script src="projectJS.js" charset="utf-8"></script>
+</body>
+
 </html>
