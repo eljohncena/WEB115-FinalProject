@@ -89,9 +89,11 @@ function myVariables() {
 }
 
 function writeDocument() {
-  document.write("<h1>" + resume.name + "</h1>");
-  document.write("<p>" + resume.city + ", " + resume.state + " " + resume.zip + " \u25C6 " + resume.phone + " \u25C6 " + resume.email + "</p>");
-  document.write("<p> Portfolio: </p>" + "<a href=\"url\" target=\"_blank\">" + resume.portfolio + "</a>");
+
+  window.scrollTo(0, 0);
+  document.write("<h1 style=\"text-align: center;\">" + resume.name + "</h1>");
+  document.write("<p style=\"text-align: center;\">" + resume.city + ", " + resume.state + " " + resume.zip + " \u25C6 " + resume.phone + " \u25C6 " + resume.email + "</p>");
+  document.write("<p style=\"text-align: center;\"> Portfolio: " + "<a href=\"url\" target=\"_blank\">" + resume.portfolio + "</a>" + "</p>");
 
   document.write("<h2 style=\"text-decoration: underline blue;\">Skills</h2>");
   document.write("<p>Coding: " + resume.coding + "</p>");
@@ -107,13 +109,16 @@ function writeDocument() {
 
   document.write("<h2 style=\"text-decoration: underline blue;\">Recent Employment</h2>");
   document.write("<p style=\"font-weight: bold;\">" + resume.company + ", " + resume.position + ", " + resume.beginning + " - " + resume.end + "</p>");
-  document.write("<p>Employment Information: " + resume.employmentInfo + "</p>");
+  document.write("<p>Employment Information:</p>");
+  document.write("<p>" + resume.employmentInfo + "</p>");
 
   document.write("<p style=\"font-weight: bold;\">" + resume.companyTwo + ", " + resume.positionTwo + ", " + resume.beginningTwo + " - " + resume.endTwo + "</p>");
-  document.write("<p>Employment Information: " + resume.employmentInfoTwo + "</p>");
+  document.write("<p>Employment Information:</p>");
+  document.write("<p>" + resume.employmentInfoTwo + "</p>");
 
   document.write("<p style=\"font-weight: bold;\">" + resume.companyThree + ", " + resume.positionThree + ", " + resume.beginningThree + " - " + resume.endThree + "</p>");
-  document.write("<p>Employment Information: " + resume.employmentInfoThree + "</p>");
+  document.write("<p>Employment Information:</p>");
+  document.write("<p>" + resume.employmentInfoThree + "</p>");
 
   document.write("<p>References: " + resume.reference + "</p>");
 
